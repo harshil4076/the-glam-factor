@@ -9,8 +9,8 @@ export default function Contact() {
             Get in Touch
           </h2>
           <p className="text-gray-700 mb-4">
-            We'd love to hear from you. Please fill out the form below and we'll
-            get back to you as soon as possible.
+            We&rsquo;d love to hear from you. Please fill out the form below and
+            we&rsquo;ll get back to you as soon as possible.
           </p>
           <form className="space-y-4">
             <div>
