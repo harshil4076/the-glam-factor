@@ -191,7 +191,7 @@ export default function Services() {
             <ul>
               {service.services && service.services.map((serviceItem, serviceIndex) => (
                 <li key={serviceIndex} className="text-gray-700"> 
-                <span className="font-semibold">{serviceItem.name}</span>  <span className="float-right">{serviceItem.price}</span>  
+                <span className="font-semibold text-xs md:text-base">{serviceItem.name}</span>  <span className="float-right text-sm md:text-base">{serviceItem.price}</span>  
                 </li>
               ))}
             </ul>

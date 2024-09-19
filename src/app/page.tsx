@@ -113,7 +113,7 @@ export default function Home() {
               email: glamfactor366@gmail.com
             </p>
             <p className="text-sm md:text-base text-black-800 text-center">
-              or call us at 597-501-9546
+              or call us at 587-501-9546
             </p>
             <div className="flex justify-center items-center">  
             <button className="bg-red-100 text-black mt-4 px-6 py-3 rounded-full hover:bg-white-600 transition duration-300 inline-block">
