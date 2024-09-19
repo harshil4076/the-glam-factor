@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
-const inter = Inter({ subsets: ["latin"] });
+const playfair = Playfair_Display({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "The Glam Factor",
@@ -18,17 +18,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="min-h-screen bg-pink-50 flex flex-col">
-          <header className="bg-pink-200 shadow-md sticky top-0 z-10">
+      <body className={playfair.className}>
+        <div className="min-h-screen flex flex-col">
+          <header className="shadow-md sticky top-0 z-10 bg-white">
             <nav className="container mx-auto px-6 py-3">
               <Navbar />
             </nav>
           </header>
           <main className="flex-grow">{children}</main>
-          <footer className="bg-pink-200 py-6">
+          <footer className="py-6">
             <div className="container mx-auto px-6 text-center">
-              <p className="text-pink-800">
+              <p className="text-black-800">
                 &copy; 2024 The Glam Factor. All rights reserved.
               </p>
             </div>
