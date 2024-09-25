@@ -1,14 +1,13 @@
 const services = [
-  {"name": "Thread and Wax For Face", "image": "/images/hot_wax.jpeg", "price": "100", "description": "Eye Enhancers"},
-  {"name": "Eye Enhancers", "image": "/images/hot_wax.jpeg", "price": "100", "description": "Eye Enhancers"},
-  {"name": "Body Waxing", "image": "/images/hot_wax.jpeg", "price": "100", "description": "Body Waxing"},
-  {"name": "Paraffine Treatmet", "image": "/images/hot_wax.jpeg", "price": "100", "description": "Paraffine Treatmet"},
-  {"name": "Backcare Treatment", "image": "/images/massage.jpg", "price": "100", "description": "Backcare Treatment"},
-  {"name": "Pre-exfoliation Treatment", "image": "/images/wax.jpg", "price": "100", "description": "Pre-exfoliation Treatment"},
-  {"name": "Backcare Treatment", "image": "/images/massage.jpg", "price": "100", "description": "Backcare Treatment"},
-  {"name": "Backcare Treatment", "image": "/images/massage.jpg", "price": "100", "description": "Backcare Treatment"},
-  {"name": "Backcare Treatment", "image": "/images/massage.jpg", "price": "100", "description": "Backcare Treatment"},
-  
+  { name: "Thread and Wax For Face", image: "/images/thread_and_wax_face.jpg" },
+  { name: "Eye Enhancers", image: "/images/eye_enhancer.jpeg" },
+  { name: "Body Waxing", image: "/images/body_waxing.jpg" },
+  { name: "Paraffine Treatmet", image: "/images/paraffin.jpeg" },
+  { name: "Backcare Treatment", image: "/images/back_scrub.jpg" },
+  {
+    name: "Pre-exfoliation Treatment",
+    image: "/images/woman-applying-body-scrub-her-shoulder.jpg",
+  },
 ];
 
 export default function Home() {
@@ -16,10 +15,11 @@ export default function Home() {
     <div className="min-h-screen bg-white-50">
       <main>
         {/* Hero Section */}
-        <section className="flex flex-col items-center justify-end px-4 md:px-8 py-8 min-h-80" style={{ backgroundImage: `url('/images/hot_wax.jpeg')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        {/* size of the section to 40% of the screen size  */}
+        <section className="flex flex-col items-center justify-end md:h-[50vh] px-4 md:px-8 py-8 bg-banner bg-cover bg-center opacity-90 bg-no-repeat">
           <div className="mb-8 md:mb-0 text-center">
-            <h1 className="text-3xl md:text-4xl font-normal text-white mb-4">
-            LET&apos;S GLAM TOGETHER
+            <h1 className="text-4xl md:text-6xl font-normal text-black-800 mb-4">
+              LET&apos;S GLAM TOGETHER
             </h1>
 
             <a
@@ -28,12 +28,10 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              BOOK NOW 
+              BOOK NOW
             </a>
           </div>
-          <div className="md:w-1/2">
-
-          </div>
+          <div className="md:w-1/2"></div>
         </section>
 
         {/* Services Section */}
@@ -43,25 +41,28 @@ export default function Home() {
               Our Services
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* opacity only apply to image */}
               {services.map((service, index) => (
-                
                 <div
                   key={index}
-                  className=" flex flex-col justify-center items-center bg-white-100 p-6 rounded-lg shadow-md text-center md:text-left"
-                  style={{ backgroundImage: `url(${service.image})`, backgroundSize: 'cover', backgroundPosition: 'center'}}
+                  className="flex flex-col justify-center items-center bg-white-100 p-6 rounded-lg shadow-md text-center md:text-left"
+                  style={{
+                    backgroundImage: `url(${service.image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    opacity: 0.5,
+                  }}
                 >
-                  <h3 className="text-lg md:text-xl font-semibold text-white mb-2">
+                  <h3 className="text-lg md:text-xl font-semibold text-black mb-2">
                     {service.name}
                   </h3>
-                  <p className="text-sm md:text-base text-white">
-                    {service.description}
-                  </p>
-                  <p className="text-sm md:text-base text-white">
-                    ${service.price}
-                  </p>
-                  <button className="bg-red-100 text-black mt-4 px-6 py-3 rounded-full hover:bg-white-600 transition duration-300 inline-block">
+                  {/* should open  category: "Threading & Waxing" on services page */}
+                  <a
+                    href="/services#threadandwaxing"
+                    className="bg-red-100 text-black mt-4 px-6 py-3 rounded-full hover:bg-white-600 transition duration-300 inline-block"
+                  >
                     Book Now
-                  </button>
+                  </a>
                 </div>
               ))}
             </div>
@@ -79,7 +80,6 @@ export default function Home() {
               <br />
               GET YOUR WAX PASS NOW.
               <br />
-
             </p>
             <p className="text-sm md:text-base text-black-800">
               Limited Time Deals
@@ -89,7 +89,7 @@ export default function Home() {
         <section className="bg-white py-8 md:py-12">
           <div className="container mx-auto px-4 md:px-6">
             <h2 className="text-2xl md:text-3xl font-bold text-center text-black-800 mb-8">
-            VISIT US
+              VISIT US
             </h2>
             <p className="text-sm md:text-base text-black-800 text-center">
               Experience the Glam Factor difference
@@ -115,12 +115,15 @@ export default function Home() {
             <p className="text-sm md:text-base text-black-800 text-center">
               or call us at 587-501-9546
             </p>
-            <div className="flex justify-center items-center">  
-            <button className="bg-red-100 text-black mt-4 px-6 py-3 rounded-full hover:bg-white-600 transition duration-300 inline-block">
-            <a href="https://www.google.com/maps" className="text-sm md:text-base text-black-800 text-center">
-              GET DIRECTIONS
-            </a>
-            </button>
+            <div className="flex justify-center items-center">
+              <button className="bg-red-100 text-black mt-4 px-6 py-3 rounded-full hover:bg-white-600 transition duration-300 inline-block">
+                <a
+                  href="https://www.google.com/maps"
+                  className="text-sm md:text-base text-black-800 text-center"
+                >
+                  GET DIRECTIONS
+                </a>
+              </button>
             </div>
           </div>
         </section>

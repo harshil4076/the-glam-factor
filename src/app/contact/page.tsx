@@ -58,11 +58,11 @@ export default function Contact() {
           <h2 className="text-2xl font-semibold text-black-800 mb-4">
             Our Location
           </h2>
-          <p>PURA VIDA SALON MEDI AND SPA</p>
+          <p>Located in PURA VIDA SALON AND MEDI-SPA</p>
           <p>366 HIGHWAY 8</p>
           <p>STONEY CREEK</p>
           <p>ON L8G 1E8</p>
-          <p>ROOM : 7</p>
+          
 
           <div className="bg-gray-200 h-64 rounded-lg">
             {/* Placeholder for map */}

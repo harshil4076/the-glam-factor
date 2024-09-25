@@ -44,6 +44,7 @@ const services1 = [
   }
 
 ];
+// book now buton navigates here
 const services2 = [
   {
     category: "Threading & Waxing",
@@ -168,7 +169,7 @@ export default function Services() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
         {services2.map((service, index) => (
-          <div key={index} className="p-6 rounded-lg shadow-md">
+          <div key={index} className="p-6 rounded-lg shadow-md" id="threadandwaxing">
             <h3 className="text-xl font-semibold text-gray-800 mb-2">
               {service.category}
             </h3>

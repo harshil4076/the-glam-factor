@@ -25,7 +25,7 @@ export default function Navbar() {
       </Link>
 
       {/* Hamburger Icon for mobile */}
-      <div className="md:hidden">
+      <div className="md:hidden flex justify-end">
         <button
           onClick={toggleMobileMenu}
           className="text-black-800 focus:outline-none"
@@ -65,13 +65,6 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden mt-4">
-          <Link
-            href="/"
-            className="block text-black-800 hover:text-black-600 py-2"
-            onClick={toggleMobileMenu}
-          >
-            Home
-          </Link>
           <Link
             href="/services"
             className="block text-black-800 hover:text-black-600 py-2"

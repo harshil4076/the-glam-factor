@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'banner': "url('/images/coconut-oil-tropical-leaves-fresh-coconuts-spa-coconut-products-light-wooden-surface.jpg')",
+        'thread-service': "url('/images/thread_and_wax_face.jpg')",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
